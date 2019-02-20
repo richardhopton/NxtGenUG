@@ -1,0 +1,12 @@
+<p:Slide xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:p="clr-namespace:Presenter;assembly=Presenter"
+         Title="Method 2: DISKPART" Width="600">
+	<Grid>
+		<StackPanel VerticalAlignment="Center">
+			<TextBlock Style="{DynamicResource HeaderText}" Text="Step 3"/>
+			<TextBlock Text="...then initialise and format it."/>
+			<p:LocalImage FileName="Images\03_Installing_2_3.png"/>
+		</StackPanel>
+	</Grid>
+</p:Slide>

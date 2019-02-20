@@ -1,0 +1,13 @@
+<p:Slide xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:p="clr-namespace:Presenter;assembly=Presenter"
+         Title="TDD application" Width="600">
+	<Grid>
+		<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+			<TextBlock Text="Roman Numerals" FontWeight="Bold"/>
+			<TextBlock Text="Output the correct Roman numeral sequence for a given numeric input between 1 and 3999"/>
+			<Button Margin="0,20,0,0" HorizontalAlignment="Right" Content="Let's code!" p:OnClickShellExecute.Command="..\Working Code\TDDForBeginners.sln"/>
+		</StackPanel>
+	
+	</Grid>
+</p:Slide>

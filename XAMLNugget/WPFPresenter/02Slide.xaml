@@ -1,0 +1,18 @@
+﻿<Page x:Class="WPFPresenter._02Slide"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Serialization: XAML vs. XML" Width="600">
+    <Grid>
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock Style="{DynamicResource HeaderText}" Text="The plan"/>
+            <ListBox Style="{DynamicResource BulletList}" HorizontalAlignment="Left">
+                <ListBox.Items>
+                    <TextBlock Text="Demonstrate the XAML &amp; XML serializers"/>
+                    <TextBlock Text="Highlight the performance &amp; functionality benefits of using XAML over XML"/>
+                    <TextBlock Text="Provide an example of how to begin preparing for the switch over"/>
+                    <TextBlock Text="Make you aware of the downsides of XAML"/>
+                </ListBox.Items>
+            </ListBox>
+        </StackPanel>
+    </Grid>
+</Page>

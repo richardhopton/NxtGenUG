@@ -1,0 +1,24 @@
+<p:Slide xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:p="clr-namespace:Presenter;assembly=Presenter"
+         Title="Resources" Width="600">
+    <Grid>
+        <StackPanel VerticalAlignment="Center">
+            <ListBox Style="{DynamicResource BulletList}">
+                <ListBox.Items>
+                    <StackPanel>
+                    <TextBlock Text="Windows Automated Installation Kit"/>
+                    <TextBlock TextDecorations="Underline" Text="http://www.tinyurl.com/WAIK4WIN7"/>
+                    <Border Height="10"/>
+                    </StackPanel>
+                    <StackPanel>
+                    <TextBlock Text="WIM2VHD"/>
+                    <TextBlock TextDecorations="Underline" Text="http://www.tinyurl.com/WIM2VHD"/>
+                    </StackPanel>
+                    
+                    </ListBox.Items>
+            </ListBox>
+        </StackPanel>
+        
+    </Grid>
+</p:Slide>

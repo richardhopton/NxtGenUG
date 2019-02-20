@@ -1,0 +1,14 @@
+<p:Slide xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:p="clr-namespace:Presenter;assembly=Presenter"
+         Title="Method 1: Disk Management" Width="600">
+	<Grid>
+		<StackPanel VerticalAlignment="Center">
+			<TextBlock Style="{DynamicResource HeaderText}" Text="Step 6"/>
+			<TextBlock Text="Right click on the new drive and select New Simple Volume and follow the wizard."/>
+			<p:LocalImage FileName="Images\03_Installing_1_6a.png"/>
+			<TextBlock Text="After a short while the new drive will be available under Computer."/>
+			<p:LocalImage FileName="Images\03_Installing_1_6b.png"/>
+		</StackPanel>
+	</Grid>
+</p:Slide>

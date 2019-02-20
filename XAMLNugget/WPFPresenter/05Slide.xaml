@@ -1,0 +1,21 @@
+﻿<Page x:Class="WPFPresenter._05Slide"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Demonstration" Width="600">
+    <Grid>
+        <StackPanel Width="600" VerticalAlignment="Center">
+            <TextBlock Style="{DynamicResource HeaderText}" Text="Samples"/>
+            <ListBox Style="{DynamicResource BulletList}">
+                <ListBox.Items>
+                    <TextBlock Text="Collection of one type of object (DVD)"/>
+                    <TextBlock Text="Collection of interfaced objects (IFilm)"/>
+                    <TextBlock Text="Preparations for switch over"/>
+                    <TextBlock Text="The downsides of XAML serializer"/>
+                </ListBox.Items>
+            </ListBox>
+            <Border Height="20"/>
+            <Button HorizontalAlignment="Right" Click="Button_Click">Demo</Button>
+        </StackPanel>
+        
+    </Grid>
+</Page>

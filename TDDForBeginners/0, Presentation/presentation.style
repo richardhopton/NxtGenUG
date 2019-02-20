@@ -1,0 +1,196 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:p="clr-namespace:Presenter;assembly=Presenter">
+	<SolidColorBrush x:Key="OrangeClick" Color="#FFFA7E03"/>
+	<Style x:Key="BaseText" TargetType="TextBlock">
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="FontFamily" Value="Calibri"/>
+		<Setter Property="TextWrapping" Value="Wrap"/>
+		<Setter Property="FontSize" Value="32"/>
+		<Setter Property="HorizontalAlignment" Value="Left"/>
+	</Style>
+	<Style TargetType="TextBlock" BasedOn="{StaticResource BaseText}"/>
+	<Style x:Key="NoBulletText" TargetType="TextBlock" BasedOn="{StaticResource BaseText}"/>
+	<Style x:Key="HeaderText" TargetType="TextBlock" BasedOn="{StaticResource BaseText}">
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="FontSize" Value="36"/>
+		<Setter Property="Margin" Value="0,0,0,5"/>
+	</Style>
+	<Style x:Key="CreditText" TargetType="TextBlock" BasedOn="{StaticResource BaseText}">
+		<Setter Property="FontStyle" Value="Italic"/>
+		<Setter Property="FontSize" Value="22"/>
+		<Setter Property="HorizontalAlignment" Value="Right"/>
+	</Style>
+	<Style x:Key="CodeText" TargetType="TextBlock" BasedOn="{StaticResource BaseText}">
+		<Setter Property="FontFamily" Value="Consolas"/>
+		<Setter Property="FontSize" Value="28"/>
+	</Style>
+	<Style x:Key="CodeLabel" TargetType="Label">
+		<Setter Property="FontFamily" Value="Consolas"/>
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="FontSize" Value="28"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="Label">
+					<Viewbox Stretch="Uniform">
+						<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Name="content"/>
+					</Viewbox>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="{x:Type p:LocalImage}">
+		<Setter Property="Margin" Value="0,10"/>
+	</Style>
+	<Style TargetType="Button">
+		<Setter Property="OverridesDefaultStyle" Value="True"/>
+		<Setter Property="Margin" Value="2"/>
+		<Setter Property="FontFamily" Value="Calibri"/>
+		<Setter Property="FontSize" Value="24"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="Background" Value="Black"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="Button">
+					<Border Name="border" BorderThickness="1" Padding="7,2" BorderBrush="DarkGray"
+					        CornerRadius="3" Background="{TemplateBinding Background}">
+						<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Name="content"/>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Background" TargetName="border" Value="#FFAAAAAA"/>
+						</Trigger>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="Background" TargetName="border" Value="#FF666666"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	
+	</Style>
+	<Style TargetType="TextBox">
+		<Setter Property="OverridesDefaultStyle" Value="True"/>
+		<Setter Property="Margin" Value="2"/>
+		<Setter Property="FontFamily" Value="Calibri"/>
+		<Setter Property="FontSize" Value="24"/>
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="Background" Value="Black"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="TextBox">
+					<Border Name="border" BorderThickness="2" Padding="7,2" CornerRadius="3"
+					        BorderBrush="{TemplateBinding Foreground}" Background="{TemplateBinding Background}">
+						<ScrollViewer Margin="0" x:Name="PART_ContentHost" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="{x:Type p:Slide}">
+		<Setter Property="Background" Value="Black"/>
+	</Style>
+	<Style x:Key="BulletList" TargetType="{x:Type ListBox}">
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="Tag" Value="10"/>
+		<Setter Property="ItemsPanel">
+			<Setter.Value>
+				<ItemsPanelTemplate>
+					<VirtualizingStackPanel Background="Transparent" Orientation="Vertical"/>
+				</ItemsPanelTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="ItemContainerStyle">
+			<Setter.Value>
+				<Style TargetType="{x:Type ListBoxItem}" >
+					<Setter Property="Margin" Value="0" />
+					<Setter Property="Foreground" Value="White" />
+					<Setter Property="Template">
+						<Setter.Value>
+							<ControlTemplate TargetType="{x:Type ListBoxItem}">
+								<Border BorderThickness="0" Background="Transparent">
+									<Grid>
+										<Grid.ColumnDefinitions>
+											<ColumnDefinition Width="Auto" />
+											<ColumnDefinition/>
+										</Grid.ColumnDefinitions>
+										<Ellipse Height="{Binding Parent.Tag}" Width="{Binding Parent.Tag}" Margin="0,0,10,0"
+										         VerticalAlignment="Center" HorizontalAlignment="Left">
+											<Ellipse.Style>
+												<Style TargetType="Ellipse">
+													<Setter Property="Fill" Value="{Binding Foreground}"/>
+													<Style.Triggers>
+														<DataTrigger Binding="{Binding Foreground}" Value="{x:Null}">
+															<Setter Property="Fill" Value="White"/>
+														</DataTrigger>
+														<DataTrigger Binding="{Binding Style}" Value="{StaticResource NoBulletText}">
+														   <Setter Property="Visibility" Value="Hidden"/>
+														</DataTrigger>
+													</Style.Triggers>
+												</Style>
+											</Ellipse.Style>
+										</Ellipse>
+										<ContentPresenter Grid.Column="1"/>
+									</Grid>
+								</Border>
+							</ControlTemplate>
+						</Setter.Value>
+					</Setter>
+				</Style>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="Control.Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ListBox}">
+					<Border BorderThickness="0" Padding="0" BorderBrush="Transparent" Background="Transparent" Name="Bd" SnapsToDevicePixels="True">
+						<ItemsPresenter SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" />
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="TagPrefixList" TargetType="{x:Type ListBox}">
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="ItemsPanel">
+			<Setter.Value>
+				<ItemsPanelTemplate>
+					<VirtualizingStackPanel Background="Transparent" Orientation="Vertical"/>
+				</ItemsPanelTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="ItemContainerStyle">
+			<Setter.Value>
+				<Style TargetType="{x:Type ListBoxItem}" >
+					<Setter Property="Margin" Value="0" />
+					<Setter Property="Template">
+						<Setter.Value>
+							<ControlTemplate TargetType="{x:Type ListBoxItem}">
+								<Border BorderThickness="0" Background="Transparent">
+									<Grid>
+										<Grid.ColumnDefinitions>
+											<ColumnDefinition Width="Auto"/>
+											<ColumnDefinition Width="{TemplateBinding ActualWidth}"/>
+										</Grid.ColumnDefinitions>
+										<TextBlock Margin="0,0,10,0" FontWeight="Bold" Style="{Binding Style}" Foreground="{Binding Foreground}" Text="{Binding Tag}"
+										           FontSize="{Binding FontSize}"/>
+										<ContentPresenter Grid.Column="1"/>
+									</Grid>
+								</Border>
+							</ControlTemplate>
+						</Setter.Value>
+					</Setter>
+				</Style>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="Control.Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ListBox}">
+					<Border BorderThickness="0" Padding="0" BorderBrush="Transparent" Background="Transparent" Name="Bd" SnapsToDevicePixels="True">
+						<ItemsPresenter SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" />
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

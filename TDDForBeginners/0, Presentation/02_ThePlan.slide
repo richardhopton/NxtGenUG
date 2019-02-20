@@ -1,0 +1,19 @@
+<p:Slide xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:p="clr-namespace:Presenter;assembly=Presenter"
+         Title="The Plan" Width="600">
+	<Grid>
+		<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+			<ListBox Style="{DynamicResource BulletList}">
+				<ListBox.Items>
+					<TextBlock Text="What is Test-driven Development"/>
+					<TextBlock Text="Look at guidelines to follow"/>
+					<TextBlock Text="Discuss some benefits of using TDD"/>
+					<TextBlock Text="Touch on the different frameworks"/>
+					<TextBlock Text="Explore parts of the MSTest Syntax"/>
+					<TextBlock Text="Develop an application using TDD"/>
+				</ListBox.Items>
+			</ListBox>
+		</StackPanel>
+	</Grid>
+</p:Slide>

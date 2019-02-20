@@ -1,0 +1,14 @@
+<p:Slide xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:p="clr-namespace:Presenter;assembly=Presenter"
+         Title="Method 4: Applying a WIM file" Width="600">
+	<Grid>
+		<StackPanel VerticalAlignment="Center">
+			<TextBlock Style="{DynamicResource HeaderText}" Text="Step 1"/>
+			<TextBlock Text="Find the install.wim file from the Windows 7 or Windows Server 2008 R2 installation media and open it with 7-Zip."/>				
+			<Border Height="10"/>
+			<TextBlock Text="Open the 1.xml file and find the image you are interested in..."/>
+			<Button HorizontalAlignment="Right" Content="Open" p:OnClickShellExecute.Command="Resources\1.xml"/>
+		</StackPanel>
+	</Grid>
+</p:Slide>

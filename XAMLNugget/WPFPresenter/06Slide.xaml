@@ -1,0 +1,15 @@
+﻿<Page x:Class="WPFPresenter._06Slide"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Conclusion" Width="600">
+    <Grid>
+        <StackPanel Width="580" VerticalAlignment="Center" HorizontalAlignment="Left">
+            <TextBlock Style="{DynamicResource HeaderText}" Text="And the winner is? XAML"/>
+            <TextBlock Text="The XAML serialization logic is a vast improvement over XML for simple classes - it also reduces the work required to enable serialization of objects with interface fields."/>
+            <Border Height="10"/>
+            <TextBlock Text="Using it on more complex object trees can yield more noticable performance gains."/>
+            <Border Height="10"/>
+            <TextBlock Text="Although there are a few known issues, they can be worked around with care and ease."/>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,27 @@
+<p:Slide xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:p="clr-namespace:Presenter;assembly=Presenter"
+         Title="Contact" Width="600" >
+    <Grid>
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock Style="{DynamicResource HeaderText}" Text="Richard Hopton"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="125" />
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock FontWeight="Bold" Text="Email:"/>
+                <TextBlock Grid.Row="1" FontWeight="Bold" Text="Twitter:"/>
+                <TextBlock Grid.Row="2" FontWeight="Bold" Text="Blog:"/>
+                <TextBlock Grid.Row="0" Grid.Column="1" Text="irtimaled@hotmail.co.uk"/>
+                <TextBlock Grid.Row="1" Grid.Column="1" Text="http://twitter.com/irtimaled"/>
+                <TextBlock Grid.Row="2" Grid.Column="1" Text="http://irtimaled.blogspot.com"/>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</p:Slide>

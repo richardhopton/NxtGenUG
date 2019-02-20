@@ -1,0 +1,13 @@
+<p:Slide xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:p="clr-namespace:Presenter;assembly=Presenter"
+         Title="MSTest syntax" Width="600">
+	<Grid>
+		<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+			<TextBlock Text="During each test you need to express some conditions that signify a test has passed or failed. In MSTest, as well as with many other testing frameworks, you achieve this using static methods on their Assert class."/>
+			<TextBlock Text="For example:-" FontWeight="Bold" Margin="0,5"/>
+			<Label Style="{DynamicResource CodeLabel}" Content="Assert.IsTrue(command.CanExecute());"/>
+		</StackPanel>
+	
+	</Grid>
+</p:Slide>

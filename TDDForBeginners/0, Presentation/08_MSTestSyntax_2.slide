@@ -1,0 +1,21 @@
+<p:Slide xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:p="clr-namespace:Presenter;assembly=Presenter"
+         Title="MSTest syntax" Width="600">
+	<Grid>
+		<StackPanel VerticalAlignment="Center">
+			<TextBlock Text="The following is a short list of the syntax you will use in the majority of tests:-"/>
+			<ListBox Style="{DynamicResource BulletList}">
+				<ListBox.Items>
+					<TextBlock Style="{DynamicResource CodeText}" Text="IsTrue"/>
+					<TextBlock Style="{DynamicResource CodeText}" Text="IsFalse"/>
+					<TextBlock Style="{DynamicResource CodeText}" Text="AreEqual"/>
+					<TextBlock Style="{DynamicResource CodeText}" Text="AreNotEqual"/>
+					<TextBlock Style="{DynamicResource CodeText}" Text="AreSame"/>
+					<TextBlock Style="{DynamicResource CodeText}" Text="AreNotSame"/>
+					<TextBlock Style="{DynamicResource CodeText}" Text="ExpectedException"/>
+				</ListBox.Items>
+			</ListBox>
+		</StackPanel>
+	</Grid>
+</p:Slide>

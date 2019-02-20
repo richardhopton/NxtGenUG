@@ -1,0 +1,52 @@
+﻿<Page x:Class="WPFPresenter._04Slide"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="The Contenders" Width="600">
+    <Grid>
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock Style="{DynamicResource HeaderText}" Text="XmlSerializer"/>
+            <ListBox Style="{DynamicResource BulletList}">
+                <ListBox.Items>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="185" />
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock FontWeight="Bold" Text="Namespace:"/>
+                        <TextBlock Grid.Column="1" Text="System.Xml.Serialization"/>
+                    </Grid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="185" />
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock FontWeight="Bold" Text="Assembly:"/>
+                        <TextBlock Grid.Column="1" Text="System.Xml.dll"/>
+                    </Grid>                
+                </ListBox.Items>
+            </ListBox>
+            <Border Height="20"/>
+            <TextBlock Style="{DynamicResource HeaderText}" Text="XamlReader &amp; XamlWriter"/>
+            <ListBox Style="{DynamicResource BulletList}">
+                <ListBox.Items>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="185" />
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock FontWeight="Bold" Text="Namespace:"/>
+                        <TextBlock Grid.Column="1" Text="System.Windows.Markup"/>
+                    </Grid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="185" />
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock FontWeight="Bold" Text="Assembly:"/>
+                        <TextBlock Grid.Column="1" Text="PresentationFramework.dll"/>
+                    </Grid>
+                </ListBox.Items>
+            </ListBox>
+        </StackPanel>
+    </Grid>
+</Page>
